@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "test-renovate"
+version = "0.0.0"
+description = "Test Renovate Configuration"
+authors = ["Yaraslau Zhylko <YaraslauZhylko@gmaol.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.9.7"
+alembic = "1.7.0"
+arrow = "0.10.0"
+"dialogue.logging" = "4.2.2"
+
+[tool.poetry.dev-dependencies]
+black = {version = "==21.9b0", allow-prereleases = true}
+pre-commit = "2.14.0"
+pylama = "7.7.0"
+
+[[tool.poetry.source]]
+name = "dialogue"
+url = "https://pypi.fury.io/dialogue"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+exclude = '.vscode|.eggs|.venv|ipython_config.py'
+
+[build-system]
+requires = ["poetry>=1.1.11"]
+build-backend = "poetry.masonry.api"
