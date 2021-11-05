@@ -49,23 +49,23 @@
     // PR branch names and labels
     {
       "matchManagers": ["circleci"],
-      "additionalBranchPrefix": "circleci",
+      "additionalBranchPrefix": "circleci/",
       "addLabels": ["circleci"]
     },
     {
       "matchManagers": ["dockerfile"],
-      "additionalBranchPrefix": "docker",
+      "additionalBranchPrefix": "docker/",
       "addLabels": ["docker"]
 
     },
     {
       "matchManagers": ["poetry"],
-      "additionalBranchPrefix": "python",
+      "additionalBranchPrefix": "python/",
       "addLabels": ["python"]
     },
     {
       "matchManagers": ["pre-commit"],
-      "additionalBranchPrefix": "pre-commit",
+      "additionalBranchPrefix": "pre-commit/",
       "addLabels": ["pre-commit"]
 
     },
