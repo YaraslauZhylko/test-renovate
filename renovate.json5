@@ -19,11 +19,14 @@
     ":autodetectPinVersions",
     ":pinDependencies",
     ":pinDevDependencies",
+    // PR naming convetions
+    ":renovatePrefix",
+    ":semanticCommits",
+    ":semanticCommitType(chore)",
+    ":label(dependencies)",
     // PR control
     ":prImmediately",
     ":rebaseStalePrs",
-    ":renovatePrefix",
-    ":semanticCommits",
     ":automergeDisabled",
     // Scheduling and limits
     ":maintainLockFilesWeekly",
@@ -31,9 +34,8 @@
     // Other
     ":enablePreCommit"
   ],
-  // PR types and scopes
-  "semanticCommitType": "chore",
   "packageRules": [
+    // PR scopes by dependency type
     {
       "matchDepTypes": ["dependencies"],
       "semanticCommitScope": "deps"
@@ -45,11 +47,8 @@
     {
       "matchDepTypes": ["peerDependencies"],
       "semanticCommitScope": "deps-peer"
-    }
-  ],
-  // PR labels
-  "labels": ["dependencies"],
-  "packageRules": [
+    },
+    // PR labels by dependency manager type
     {
       "matchManagers": ["circleci"],
       "addLabels": ["circleci"]
@@ -62,16 +61,13 @@
     {
       "matchManagers": ["poetry"],
       "addLabels": ["python"]
-
     },
     {
       "matchManagers": ["pre-commit"],
       "addLabels": ["pre-commit"]
 
-    }
-  ],
-  // Ignore specific packages
-  "packageRules": [
+    },
+    // Ignore specific packages
     {
       "packageNames": ["arrow"],
       "enabled": false
