@@ -72,7 +72,7 @@
     {
       "description": "Allow `black` updates",
       "matchPackageNames": ["black", "psf/black"],
-      // "versioning": "pep440",
+      "versioning": "pep440",
       "ignoreUnstable": false
     }
   ]
