@@ -13,7 +13,7 @@
     // PR naming
     ":semanticCommits",
     ":semanticCommitType(chore)",
-    ":label(dependencies)",
+    ":labels(dependencies)",
     // PR control
     ":prImmediately",
     ":rebaseStalePrs",
@@ -22,39 +22,42 @@
     ":maintainLockFilesWeekly",
     ":disableRateLimiting"
   ],
-  // Branch names and PR labels
-  "circleci": {
-    "additionalBranchPrefix": "circleci/",
-    "addLabels": ["circleci"]
-  },
-  "docker": {
-    "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"]
-  },
-  "poetry": {
-    "additionalBranchPrefix": "python/",
-    "addLabels": ["python"]
-  },
-  "pre-commit": {
-    "additionalBranchPrefix": "pre-commit/",
-    "addLabels": ["pre-commit"],
-    "enabled": true  // explicitly enable experimental manager
-  },
-  // Per-package settings
   "packageRules": [
-    // // PR scopes
-    // {
-    //   "matchDepTypes": ["dependencies"],
-    //   "semanticCommitScope": "deps"
-    // },
-    // {
-    //   "matchDepTypes": ["devDependencies"],
-    //   "semanticCommitScope": "deps-dev"
-    // },
-    // {
-    //   "matchDepTypes": ["peerDependencies"],
-    //   "semanticCommitScope": "deps-peer"
-    // },
+    // Branch names and PR labels
+    {
+      "matchManagers": ["circleci"],
+      "additionalBranchPrefix": "circleci/",
+      "addLabels": ["circleci"]
+    },
+    {
+      "matchManagers": ["dockerfile"],
+      "additionalBranchPrefix": "docker/",
+      "addLabels": ["docker"]
+    },
+    {
+      "matchManagers": ["poetry"],
+      "additionalBranchPrefix": "python/",
+      "addLabels": ["python"]
+    },
+    {
+      "matchManagers": ["pre-commit"],
+      "additionalBranchPrefix": "pre-commit/",
+      "addLabels": ["pre-commit"],
+      "enabled": true  // explicitly enable experimental manager
+    },
+    // PR scopes
+    {
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "semanticCommitScope": "deps-dev"
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "semanticCommitScope": "deps-peer"
+    },
     // Ignore specific packages
     {
       "matchPackageNames": ["arrow"],
