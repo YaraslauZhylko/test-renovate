@@ -20,11 +20,6 @@
     ":autodetectPinVersions",
     ":pinDependencies",
     ":pinDevDependencies",
-    // PR naming convention
-    ":renovatePrefix",
-    ":semanticCommits",
-    ":semanticCommitType(chore)",
-    ":label(dependencies)",
     // PR control
     ":prImmediately",
     ":rebaseStalePrs",
@@ -36,7 +31,21 @@
     ":enablePreCommit"
   ],
   "packageRules": [
-    // PR scopes by dependency type
+    // Pinning strategy
+    {
+      "packageNames": ["*"],
+      "rangeStrategy": "pin"
+    },
+    {
+      "packageNames": ["arrow"],
+      "enabled": false
+    },
+    // PR types and scopes
+    {
+      "matchDepTypes": ["*"],
+      "semanticCommits": true,
+      "semanticCommitType": "chore"
+    },
     {
       "matchDepTypes": ["dependencies"],
       "semanticCommitScope": "deps"
@@ -49,7 +58,11 @@
       "matchDepTypes": ["peerDependencies"],
       "semanticCommitScope": "deps-peer"
     },
-    // PR labels by dependency manager type
+    // PR labels
+    {
+      "matchManagers": ["*"],
+      "labels": ["dependencies"]
+    },
     {
       "matchManagers": ["circleci"],
       "addLabels": ["circleci"]
