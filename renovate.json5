@@ -26,7 +26,6 @@
     ":semanticCommits",
     ":automergeDisabled",
     // Scheduling and limits
-    "schedule:daily",
     ":maintainLockFilesWeekly",
     ":disableRateLimiting",
     // Other
