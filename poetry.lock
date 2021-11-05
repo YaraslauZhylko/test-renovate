@@ -377,7 +377,7 @@ testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", 
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9.7"
-content-hash = "7ee0be7ffe030233d996bbff16d51ad77802f6b8bf6fb1801e254e5120aa2a47"
+content-hash = "6538a4a164b5e99f0910a2784f6052215bf3b07cb985bd22ac12b1f15867315d"
 
 [metadata.files]
 alembic = [
