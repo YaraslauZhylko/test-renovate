@@ -68,7 +68,7 @@
   "packageRules": [
     {
       "description": "Allow `black` updates",
-      "matchPackageNames": ["black"],
+      "matchPackageNames": ["black", "psf/black"],
       "ignoreUnstable": false
     }
   ]
