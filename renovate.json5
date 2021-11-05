@@ -37,7 +37,7 @@
         "description": "Specific `deps-dev` scope for dev dependencies",
         "matchDepTypes": ["devDependencies"],
         "semanticCommitScope": "deps-dev"
-      }
+      },
       {
         "description": "Ignore `arrow` updates till it is properly migrated",
         "matchPackageNames": ["arrow"],
