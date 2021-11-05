@@ -30,7 +30,7 @@
     ":maintainLockFilesWeekly",
     ":disableRateLimiting",
     // Other
-    ":enablePreCommit",
+    ":enablePreCommit"
   ],
   // PR types and scopes
   "semanticCommitType": "chore",
