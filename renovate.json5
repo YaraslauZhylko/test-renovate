@@ -16,10 +16,11 @@
     // }
   ],
   "extends": [
-    // Version pinning
-    ":autodetectPinVersions",
-    ":pinDependencies",
-    ":pinDevDependencies",
+    // Pinning strategy
+    ":pinVersions",
+    // PR naming
+    ":semanticCommitType(chore)",
+    ":label(dependencies)",
     // PR control
     ":prImmediately",
     ":rebaseStalePrs",
@@ -31,16 +32,7 @@
     ":enablePreCommit"
   ],
   "packageRules": [
-    // Pinning strategy
-    {
-      "packageNames": [],
-      "rangeStrategy": "pin"
-    },
-    // PR types and scopes
-    {
-      "matchDepTypes": [],
-      "semanticCommitType": "chore"
-    },
+    // PR scopes
     {
       "matchDepTypes": ["dependencies"],
       "semanticCommitScope": "deps"
@@ -54,10 +46,6 @@
       "semanticCommitScope": "deps-peer"
     },
     // PR labels
-    {
-      "matchManagers": [],
-      "labels": ["dependencies"]
-    },
     {
       "matchManagers": ["circleci"],
       "addLabels": ["circleci"]
