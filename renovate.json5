@@ -11,7 +11,8 @@
       "encrypted": {
         "username": "yy3o2qADQLdev3adyYYIzux8GZH9M1rgLqAekTo68lb4REOhWcUyfWB1MJn0IhONz5e8BbuiaA+VRIzJog8UTB0CmltnZ10Yp+Y8KrPilc71xEFFdQagv/24+P0jq0bPiHJvES+rE7FFkvTFhobLTkHHvTILagqmAJHHXrkbvnZgm+LtGkcCKU0V+Z5SCY7MtH8W1WaCJs158M8oelnBFinbN8qbbs0oHyfKYhrPE8knI287YK0aLgZ8cB35rGEmvbtDkSfQZY/QS4IwcoWoC3Z1BrujNkost2AJ+AHS1Edff2i4OftFuW957LzDzD24OCU0YD6xKzr4E1m8OTlO6Q=="
       },
-      "password": ""
+      "password": "",
+      "enabled": false
     }
   ],
   "extends": [
