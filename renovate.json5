@@ -1,10 +1,4 @@
 {
-  "enabledManagers": [
-    "circleci",
-    "dockerfile",
-    "poetry",
-    "pre-commit"
-  ],
   "hostRules": [
     // {
     //   "baseUrl": "https://pypi.fury.io/dialogue/",
@@ -26,32 +20,28 @@
     ":automergeDisabled",
     // Scheduling and limits
     ":maintainLockFilesWeekly",
-    ":disableRateLimiting",
-    // Other
-    ":enablePreCommit"
+    ":disableRateLimiting"
   ],
+  // Branch names and PR labels
+  "circleci": {
+    "additionalBranchPrefix": "circleci/",
+    "addLabels": ["circleci"]
+  },
+  "docker": {
+    "additionalBranchPrefix": "docker/",
+    "addLabels": ["docker"]
+  },
+  "python": {
+    "additionalBranchPrefix": "python/",
+    "addLabels": ["python"]
+  },
+  "pre-commit": {
+    "additionalBranchPrefix": "pre-commit/",
+    "addLabels": ["pre-commit"],
+    "enabled": true  // explicitly enable experimental manager
+  },
+  // Per-package settings
   "packageRules": [
-    // Branch names and PR labels
-    {
-      "matchManagers": ["circleci"],
-      "additionalBranchPrefix": "circleci/",
-      "addLabels": ["circleci"]
-    },
-    {
-      "matchManagers": ["dockerfile"],
-      "additionalBranchPrefix": "docker/",
-      "addLabels": ["docker"]
-    },
-    {
-      "matchManagers": ["poetry"],
-      "additionalBranchPrefix": "python/",
-      "addLabels": ["python"]
-    },
-    {
-      "matchManagers": ["pre-commit"],
-      "additionalBranchPrefix": "pre-commit/",
-      "addLabels": ["pre-commit"]
-    },
     // PR scopes
     {
       "matchDepTypes": ["dependencies"],
