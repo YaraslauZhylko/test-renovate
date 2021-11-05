@@ -71,11 +71,11 @@
     },
     // Ignore specific packages
     {
-      "packageNames": ["arrow"],
+      "matchPackageNames": ["arrow"],
       "enabled": false
     },
     {
-      "packageNames": ["fastapi-sqla", "pyramid"],
+      "matchPackageNames": ["fastapi-sqla", "pyramid"],
       "matchUpdateTypes": ["major"],
       "enabled": false
     }
