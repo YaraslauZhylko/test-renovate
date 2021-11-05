@@ -10,63 +10,59 @@
     // }
   ],
   "extends": [
-    // PR naming
     ":semanticCommits",
     ":semanticCommitType(chore)",
+    ":semanticCommitScope(deps)",
     ":label(dependencies)",
-    // PR control
     ":prImmediately",
     ":rebaseStalePrs",
     ":automergeDisabled",
-    // Scheduling and limits
-    ":maintainLockFilesWeekly",
     ":disableRateLimiting"
   ],
-  "packageRules": [
-    // Branch names and PR labels
-    {
-      "matchManagers": ["circleci"],
-      "additionalBranchPrefix": "circleci/",
-      "addLabels": ["circleci"]
-    },
-    {
-      "matchManagers": ["dockerfile"],
-      "additionalBranchPrefix": "docker/",
-      "addLabels": ["docker"]
-    },
-    {
-      "matchManagers": ["poetry"],
-      "additionalBranchPrefix": "python/",
-      "addLabels": ["python"]
-    },
-    {
-      "matchManagers": ["pre-commit"],
-      "additionalBranchPrefix": "pre-commit/",
-      "addLabels": ["pre-commit"],
-      "enabled": true  // explicitly enable experimental manager
-    },
-    // PR scopes
-    {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitScope": "deps"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "semanticCommitScope": "deps-dev"
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "semanticCommitScope": "deps-peer"
-    },
-    // Ignore specific packages
-    {
-      "matchPackageNames": ["arrow"],
-      "enabled": false
-    },
-    {
-      "matchPackageNames": ["fastapi-sqla", "pyramid"],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
+  "circleci": {
+    "enabled": true,
+    "additionalBranchPrefix": "circleci/",
+    "addLabels": ["circleci"]
+  },
+  "docker": {
+    "additionalBranchPrefix": "docker/",
+    "addLabels": ["docker"]
+  },
+  "python": {
+    "enabled": true,
+    "additionalBranchPrefix": "python/",
+    "addLabels": ["python"],
+    "packageRules": [
+      {
+        "description": "Specific `deps-dev` scope for dev dependencies",
+        "matchDepTypes": ["devDependencies"],
+        "semanticCommitScope": "deps-dev"
+      }
+      {
+        "description": "Ignore `arrow` updates till it is properly migrated",
+        "matchPackageNames": ["arrow"],
+        "enabled": false
+      },
+      {
+        "description": "Ignore `fastapi-sqla` updates till it is properly migrated",
+        "matchPackageNames": ["fastapi-sqla"],
+        "matchUpdateTypes": ["major"],
+        "enabled": false
+      },
+      {
+        "description": "Ignore `pyramid` updates till it is properly migrated",
+        "matchPackageNames": ["pyramid"],
+        "matchUpdateTypes": ["major"],
+        "enabled": false
+      }
+    ],
+    "lockFileMaintenance": {
+      "enabled": true
     }
-  ]
+  },
+  "pre-commit": {
+    "enabled": true,
+    "additionalBranchPrefix": "pre-commit/",
+    "addLabels": ["pre-commit"]
+  }
 }
