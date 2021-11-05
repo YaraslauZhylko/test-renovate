@@ -31,7 +31,7 @@
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   },
-  "python": {
+  "poetry": {
     "additionalBranchPrefix": "python/",
     "addLabels": ["python"]
   },
@@ -42,19 +42,19 @@
   },
   // Per-package settings
   "packageRules": [
-    // PR scopes
-    {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitScope": "deps"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "semanticCommitScope": "deps-dev"
-    },
-    {
-      "matchDepTypes": ["peerDependencies"],
-      "semanticCommitScope": "deps-peer"
-    },
+    // // PR scopes
+    // {
+    //   "matchDepTypes": ["dependencies"],
+    //   "semanticCommitScope": "deps"
+    // },
+    // {
+    //   "matchDepTypes": ["devDependencies"],
+    //   "semanticCommitScope": "deps-dev"
+    // },
+    // {
+    //   "matchDepTypes": ["peerDependencies"],
+    //   "semanticCommitScope": "deps-peer"
+    // },
     // Ignore specific packages
     {
       "matchPackageNames": ["arrow"],
