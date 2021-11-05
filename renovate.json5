@@ -33,17 +33,12 @@
   "packageRules": [
     // Pinning strategy
     {
-      "packageNames": ["*"],
+      "packageNames": [],
       "rangeStrategy": "pin"
-    },
-    {
-      "packageNames": ["arrow"],
-      "enabled": false
     },
     // PR types and scopes
     {
-      "matchDepTypes": ["*"],
-      "semanticCommits": true,
+      "matchDepTypes": [],
       "semanticCommitType": "chore"
     },
     {
@@ -60,7 +55,7 @@
     },
     // PR labels
     {
-      "matchManagers": ["*"],
+      "matchManagers": [],
       "labels": ["dependencies"]
     },
     {
