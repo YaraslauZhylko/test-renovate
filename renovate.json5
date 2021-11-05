@@ -35,7 +35,7 @@
     "packageRules": [
       {
         "description": "Specific `deps-dev` scope for dev dependencies",
-        "matchDepTypes": ["devDependencies"],
+        "matchDepTypes": ["dev-dependencies"],
         "semanticCommitScope": "deps-dev"
       },
       {
@@ -64,5 +64,12 @@
     "enabled": true,
     "additionalBranchPrefix": "pre-commit/",
     "addLabels": ["pre-commit"]
-  }
+  },
+  "packageRules": [
+    {
+      "description": "Allow `black` updates",
+      "matchPackageNames": ["black"],
+      "ignoreUnstable": false
+    }
+  ]
 }
