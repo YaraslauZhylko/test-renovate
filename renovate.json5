@@ -17,7 +17,7 @@
   ],
   "extends": [
     // Pinning strategy
-    ":pinVersions",
+    // ":pinVersions",
     // PR naming
     ":semanticCommits",
     ":semanticCommitType(chore)",
@@ -35,16 +35,16 @@
   "packageRules": [
     // PR scopes
     {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitScope": "deps"
+      "matchDepTypes": ["peerDependencies"],
+      "semanticCommitScope": "deps-peer"
     },
     {
       "matchDepTypes": ["devDependencies"],
       "semanticCommitScope": "deps-dev"
     },
     {
-      "matchDepTypes": ["peerDependencies"],
-      "semanticCommitScope": "deps-peer"
+      "matchDepTypes": ["dependencies"],
+      "semanticCommitScope": "deps"
     },
     // PR branch names and labels
     {
