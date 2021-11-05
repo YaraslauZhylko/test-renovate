@@ -65,14 +65,15 @@
     "enabled": true,
     "additionalBranchPrefix": "pre-commit/",
     "semanticCommitScope": "deps-dev",
-    "addLabels": ["pre-commit"]
+    "addLabels": ["pre-commit"],
+    "versioning": "semver-coerced"
   },
-  "packageRules": [
-    {
-      "description": "Allow `black` updates",
-      "matchPackageNames": ["black", "psf/black"],
-      "versioning": "pep440",
-      "ignoreUnstable": false
-    }
-  ]
+  // "packageRules": [
+  //   {
+  //     "description": "Allow `black` updates",
+  //     "matchPackageNames": ["black", "psf/black"],
+  //     "versioning": "pep440",
+  //     "ignoreUnstable": false
+  //   }
+  // ]
 }
