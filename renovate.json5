@@ -22,6 +22,7 @@
   "circleci": {
     "enabled": true,
     "additionalBranchPrefix": "circleci/",
+    "semanticCommitScope": "deps-dev",
     "addLabels": ["circleci"]
   },
   "docker": {
