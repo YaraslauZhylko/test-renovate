@@ -19,6 +19,7 @@
     // Pinning strategy
     ":pinVersions",
     // PR naming
+    ":semanticCommits",
     ":semanticCommitType(chore)",
     ":label(dependencies)",
     // PR control
