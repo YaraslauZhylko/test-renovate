@@ -19,7 +19,7 @@
     ":autodetectPinVersions",
     ":pinDependencies",
     ":pinDevDependencies",
-    // PR naming convetions
+    // PR naming convention
     ":renovatePrefix",
     ":semanticCommits",
     ":semanticCommitType(chore)",
