@@ -36,7 +36,10 @@
   "docker": {
     "enabled": true,
     "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"]
+    "addLabels": ["docker"],
+    "separateMultipleMajor": true,
+    "separateMajorMinor": true,
+    "separateMinorPatch": true
   },
   "python": {
     "enabled": true,
