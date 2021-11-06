@@ -76,18 +76,13 @@
     "additionalBranchPrefix": "pre-commit/",
     "semanticCommitScope": "deps-dev",
     "addLabels": ["pre-commit"],
-    "versioning": "semver-coerced",
+    "versioning": "loose",
     "packageRules": [
       {
         "description": "All pre-commit hooks in one PR",
         "matchPackagePatterns": ["*"],
         "groupName": "pre-commit hooks",
         "groupSlug": "all-hooks",
-      },
-      {
-        "description": "Allow non-standard 'pre-commit-circleci' versions",
-        "matchPackageNames": ["zahorniak/pre-commit-circleci"],
-        "versioning": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)$"
       }
     ]
   },
