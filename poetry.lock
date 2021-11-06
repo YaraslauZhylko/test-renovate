@@ -130,6 +130,18 @@ python-versions = ">=3.6.1"
 license = ["editdistance-s"]
 
 [[package]]
+name = "isort"
+version = "5.0.0"
+description = "A Python utility / library to sort Python imports."
+category = "dev"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[package.extras]
+pipfile_deprecated_finder = ["pipreqs", "requirementslib", "tomlkit (>=0.5.3)"]
+requirements_deprecated_finder = ["pipreqs", "pip-api"]
+
+[[package]]
 name = "mako"
 version = "1.1.5"
 description = "A super-fast templating language that borrows the  best ideas from the existing templating languages."
@@ -389,7 +401,7 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9.7"
-content-hash = "c43d830f030bad12bb7d38ff5bc8a7076785bda12b2791383829de1b2ee78234"
+content-hash = "85ab44c26e124ffbdbc26b624d50ae99d28e3125c4be02f7bcdc4568d5fc314e"
 
 [metadata.files]
 alembic = [
@@ -482,6 +494,10 @@ greenlet = [
 identify = [
     {file = "identify-2.3.4-py2.py3-none-any.whl", hash = "sha256:4de55a93e0ba72bf917c840b3794eb1055a67272a1732351c557c88ec42011b1"},
     {file = "identify-2.3.4.tar.gz", hash = "sha256:595283a1c3a078ac5774ad4dc4d1bdd0c1602f60bcf11ae673b64cb2b1945762"},
+]
+isort = [
+    {file = "isort-5.0.0-py3-none-any.whl", hash = "sha256:0d75ab8e70a2cb3281f0bbd02cbb179f6cac3fa5a8a0d29cf3c425f3574271f0"},
+    {file = "isort-5.0.0.tar.gz", hash = "sha256:96afb994c4c6f2cb52974363ea56881942a70b57029d2f750e1009921a5b3aa2"},
 ]
 mako = [
     {file = "Mako-1.1.5-py2.py3-none-any.whl", hash = "sha256:6804ee66a7f6a6416910463b00d76a7b25194cd27f1918500c5bd7be2a088a23"},

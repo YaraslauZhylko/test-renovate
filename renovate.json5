@@ -28,7 +28,7 @@
       {
         "description": "All orbs in one PR",
         "matchPackagePatterns": ["*"],
-        "groupName": "all orbs",
+        "groupName": "CircleCI orbs",
         "groupSlug": "all-orbs",
       }
     ]
@@ -45,7 +45,7 @@
       {
         "description": "All dev dependencies in one PR",
         "matchDepTypes": ["dev-dependencies"],
-        "groupName": "dev dependencies",
+        "groupName": "Python dev dependencies",
         "groupSlug": "all-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
@@ -81,14 +81,14 @@
       {
         "description": "All pre-commit hooks in one PR",
         "matchPackagePatterns": ["*"],
-        "groupName": "all hooks",
+        "groupName": "pre-commit hooks",
         "groupSlug": "all-hooks",
       }
     ]
   },
   "packageRules": [
     {
-      "description": "Allow `black` updates",
+      "description": "Allow 'black' updates",
       "matchPackageNames": ["black", "psf/black"],
       "versioning": "pep440",
       "ignoreUnstable": false
