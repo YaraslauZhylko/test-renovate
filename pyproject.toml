@@ -13,6 +13,7 @@ arrow = "0.10.0"
 black = {version = "21.9b0", allow-prereleases = true}
 pre-commit = "2.14.0"
 pylama = "7.7.0"
+yamllint = "1.25.0"
 
 [tool.black]
 line-length = 88
