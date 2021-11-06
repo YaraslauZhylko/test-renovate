@@ -6,7 +6,7 @@ authors = ["Yaraslau Zhylko <YaraslauZhylko@gmaol.com>"]
 
 [tool.poetry.dependencies]
 python = "~3.9.7"
-alembic = "1.7.0"
+alembic = "1.7.4"
 arrow = "0.10.0"
 
 [tool.poetry.dev-dependencies]
