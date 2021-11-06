@@ -69,7 +69,8 @@
       }
     ],
     "lockFileMaintenance": {
-      "enabled": true
+      "enabled": true,
+      "schedule": "at any time"
     }
   },
   "pre-commit": {
