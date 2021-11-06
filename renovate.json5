@@ -70,10 +70,26 @@
   },
   "packageRules": [
     {
-      "description": "Allow `black` updates",
+      "groupName": "`black` dependency",
+      "groupSlug": "black",
       "matchPackageNames": ["black", "psf/black"],
       "versioning": "pep440",
       "ignoreUnstable": false
-    }
+    },
+    {
+      "groupName": "`isort` dependency",
+      "groupSlug": "isort",
+      "matchPackageNames": ["isort", "PyCQA/isort"]
+    },
+    {
+      "groupName": "`eradicate` dependency",
+      "groupSlug": "eradicate",
+      "matchPackageNames": ["eradicate", "myint/eradicate"]
+    },
+    {
+      "groupName": "`yamllint` dependency",
+      "groupSlug": "yamllint",
+      "matchPackageNames": ["yamllint", "adrienverge/yamllint"]
+    },
   ]
 }
