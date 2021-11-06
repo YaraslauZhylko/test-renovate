@@ -28,7 +28,7 @@
       {
         "description": "All orbs in one PR",
         "matchPackagePatterns": ["*"],
-        "groupName": "CircleCI orbs",
+        "groupName": "circleci orbs",
         "groupSlug": "all-orbs"
       }
     ]
@@ -46,7 +46,7 @@
       {
         "description": "All dev dependencies in one PR",
         "matchDepTypes": ["dev-dependencies"],
-        "groupName": "Python dev dependencies",
+        "groupName": "python dev dependencies",
         "groupSlug": "all-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
