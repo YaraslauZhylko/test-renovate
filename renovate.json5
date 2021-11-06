@@ -22,7 +22,7 @@
   "circleci": {
     "enabled": true,
     "additionalBranchPrefix": "circleci/",
-    "semanticCommitScope": "deps-dev",
+    "semanticCommitScope": "deps-ci",
     "addLabels": ["circleci"],
     "packageRules": [
       {
