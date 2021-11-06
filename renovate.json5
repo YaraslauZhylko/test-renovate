@@ -29,11 +29,12 @@
         "description": "All orbs in one PR",
         "matchPackagePatterns": ["*"],
         "groupName": "CircleCI orbs",
-        "groupSlug": "all-orbs",
+        "groupSlug": "all-orbs"
       }
     ]
   },
   "docker": {
+    "enabled": true,
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   },
@@ -82,7 +83,7 @@
         "description": "All pre-commit hooks in one PR",
         "matchPackagePatterns": ["*"],
         "groupName": "pre-commit hooks",
-        "groupSlug": "all-hooks",
+        "groupSlug": "all-hooks"
       }
     ]
   },
