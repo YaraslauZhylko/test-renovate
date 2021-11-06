@@ -35,23 +35,23 @@
     "addLabels": ["python"],
     "packageRules": [
       {
-        "description": "Specific `deps-dev` scope for dev dependencies",
+        "description": "Specific 'deps-dev' scope for dev dependencies",
         "matchDepTypes": ["dev-dependencies"],
         "semanticCommitScope": "deps-dev"
       },
       {
-        "description": "Ignore `arrow` updates till it is properly migrated",
+        "description": "Ignore 'arrow' updates till it is properly migrated",
         "matchPackageNames": ["arrow"],
         "enabled": false
       },
       {
-        "description": "Ignore `fastapi-sqla` updates till it is properly migrated",
+        "description": "Ignore 'fastapi-sqla' updates till it is properly migrated",
         "matchPackageNames": ["fastapi-sqla"],
         "matchUpdateTypes": ["major"],
         "enabled": false
       },
       {
-        "description": "Ignore `pyramid` updates till it is properly migrated",
+        "description": "Ignore 'pyramid' updates till it is properly migrated",
         "matchPackageNames": ["pyramid"],
         "matchUpdateTypes": ["major"],
         "enabled": false
@@ -70,24 +70,24 @@
   },
   "packageRules": [
     {
-      "groupName": "`black` dependency",
+      "groupName": "black dependency",
       "groupSlug": "black",
       "matchPackageNames": ["black", "psf/black"],
       "versioning": "pep440",
       "ignoreUnstable": false
     },
     {
-      "groupName": "`isort` dependency",
+      "groupName": "isort dependency",
       "groupSlug": "isort",
       "matchPackageNames": ["isort", "PyCQA/isort"]
     },
     {
-      "groupName": "`eradicate` dependency",
+      "groupName": "eradicate dependency",
       "groupSlug": "eradicate",
       "matchPackageNames": ["eradicate", "myint/eradicate"]
     },
     {
-      "groupName": "`yamllint` dependency",
+      "groupName": "yamllint dependency",
       "groupSlug": "yamllint",
       "matchPackageNames": ["yamllint", "adrienverge/yamllint"]
     },
