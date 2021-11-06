@@ -2,21 +2,21 @@
 exclude: ipython_config.py
 repos:
   - repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 21.10b0
     hooks:
       - id: black
         language_version: python3.9
   - repo: https://github.com/PyCQA/isort
-    rev: 5.0.0
+    rev: 5.10.0
     hooks:
       - id: isort
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.25.0
+    rev: v1.26.3
     hooks:
       - id: yamllint
         args: [--strict]
   - repo: https://github.com/zahorniak/pre-commit-circleci
-    rev: v0.2
+    rev: v0.3
     hooks:
       - id: circleci_validate
         name: circleci
