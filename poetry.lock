@@ -1,6 +1,6 @@
 [[package]]
 name = "alembic"
-version = "1.7.4"
+version = "1.7.5"
 description = "A database migration tool for SQLAlchemy."
 category = "main"
 optional = false
@@ -454,12 +454,12 @@ pyyaml = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9.7"
-content-hash = "0583da13efb05f8f6ab48620800afd5763f5bd9563d683a36f801f74f63cb1cd"
+content-hash = "87142572ff7ff52853c94af8678576c11f0471daf63ad4b83e60c74827d45f71"
 
 [metadata.files]
 alembic = [
-    {file = "alembic-1.7.4-py3-none-any.whl", hash = "sha256:e3cab9e59778b3b6726bb2da9ced451c6622d558199fd3ef914f3b1e8f4ef704"},
-    {file = "alembic-1.7.4.tar.gz", hash = "sha256:9d33f3ff1488c4bfab1e1a6dfebbf085e8a8e1a3e047a43ad29ad1f67f012a1d"},
+    {file = "alembic-1.7.5-py3-none-any.whl", hash = "sha256:a9dde941534e3d7573d9644e8ea62a2953541e27bc1793e166f60b777ae098b4"},
+    {file = "alembic-1.7.5.tar.gz", hash = "sha256:7c328694a2e68f03ee971e63c3bd885846470373a5b532cf2c9f1601c413b153"},
 ]
 arrow = [
     {file = "arrow-0.10.0.tar.gz", hash = "sha256:805906f09445afc1f0fc80187db8fe07670e3b25cdafa09b8d8ac264a8c0c722"},
