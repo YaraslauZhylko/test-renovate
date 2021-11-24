@@ -79,6 +79,13 @@
       }
     ]
   },
+  "pyenv": {
+    "enabled": true,
+    "additionalBranchPrefix": "pyenv/",
+    "semanticCommitScope": "deps-dev",
+    "addLabels": ["pyenv"],
+    "commitMessageTopic": "pyenv python version"
+  },
   "setup-cfg": {
     "enabled": false
   },
