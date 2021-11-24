@@ -19,19 +19,16 @@
     "packageRules": [
       {
         "description": "All orbs in one PR",
-        "matchPackagePatterns": ["*"],
+        "matchDatasources": ["orb"],
         "groupName": "circleci orbs",
-        "groupSlug": "all-orbs"
+        "groupSlug": "orbs"
       }
     ]
   },
   "docker": {
     "enabled": true,
     "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"],
-    "separateMultipleMajor": true,
-    "separateMajorMinor": true,
-    "separateMinorPatch": true
+    "addLabels": ["docker"]
   },
   "python": {
     "enabled": true,
@@ -42,7 +39,7 @@
         "description": "All dev dependencies in one PR",
         "matchDepTypes": ["dev-dependencies"],
         "groupName": "python dev dependencies",
-        "groupSlug": "all-dev-dependencies",
+        "groupSlug": "dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
       {
@@ -51,14 +48,14 @@
         "enabled": false
       },
       {
-        "description": "Ignore 'fastapi-sqla' updates till it is properly migrated",
-        "matchPackageNames": ["fastapi-sqla"],
+        "description": "Ignore major updates of the following packages till they are properly migrated",
+        "matchPackageNames": ["fastapi-sqla", "pyramid"],
         "matchUpdateTypes": ["major"],
         "enabled": false
       },
       {
-        "description": "Ignore 'pyramid' updates till it is properly migrated",
-        "matchPackageNames": ["pyramid"],
+        "description": "Ignore major updates of the following packages because they depend on the above packages that need proper migration",
+        "matchPackageNames": ["jsonschema", "pyramid_multiauth"],
         "matchUpdateTypes": ["major"],
         "enabled": false
       }
@@ -78,9 +75,12 @@
         "description": "All pre-commit hooks in one PR",
         "matchPackagePatterns": ["*"],
         "groupName": "pre-commit hooks",
-        "groupSlug": "all-hooks"
+        "groupSlug": "hooks"
       }
     ]
+  },
+  "setup-cfg": {
+    "enabled": false
   },
   "packageRules": [
     {
@@ -88,6 +88,13 @@
       "matchPackageNames": ["black", "psf/black"],
       "versioning": "pep440",
       "ignoreUnstable": false
+    },
+    {
+      "description": "Enforce Docker image version granularity",
+      "matchDatasources": ["docker"],
+      "separateMultipleMajor": true,
+      "separateMajorMinor": true,
+      "separateMinorPatch": true
     }
   ]
 }
