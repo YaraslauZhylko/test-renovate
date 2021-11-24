@@ -30,9 +30,9 @@
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   },
-  "python": {
+  "poetry": {
     "enabled": true,
-    "additionalBranchPrefix": "python/",
+    "additionalBranchPrefix": "poetry/",
     "addLabels": ["python"],
     "packageRules": [
       {
@@ -83,8 +83,8 @@
     "enabled": true,
     "additionalBranchPrefix": "pyenv/",
     "semanticCommitScope": "deps-dev",
-    "addLabels": ["pyenv"],
-    "commitMessageTopic": "pyenv python version"
+    "commitMessageTopic": "pyenv python version",
+    "addLabels": ["pyenv"]
   },
   "setup-cfg": {
     "enabled": false
