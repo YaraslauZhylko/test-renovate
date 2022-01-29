@@ -92,12 +92,6 @@
   },
   "packageRules": [
     {
-      "description": "Allow 'black' updates",
-      "matchPackageNames": ["black", "psf/black"],
-      "versioning": "pep440",
-      "ignoreUnstable": false
-    },
-    {
       "description": "Enforce Docker image version granularity",
       "matchDatasources": ["docker"],
       "separateMultipleMajor": true,
