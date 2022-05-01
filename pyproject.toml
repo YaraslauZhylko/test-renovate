@@ -11,10 +11,10 @@ arrow = "0.10.0"
 pydantic = {version = "1.8.2", extras = ["email"]}
 
 [tool.poetry.dev-dependencies]
-black = {version = "21.10b0", allow-prereleases = true}
+black = {version = "22.3.0", allow-prereleases = true}
 isort = "5.10.1"
 pre-commit = "2.15.0"
-pylama = "7.7.1"
+pylama = "8.3.8"
 yamllint = "1.26.3"
 
 [tool.black]
