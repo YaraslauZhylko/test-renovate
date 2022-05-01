@@ -33,9 +33,12 @@
   },
   "kubernetes": {
     "enabled": true,
-    "fileMatch": ["^(app|job)\\.ya?ml$"],
+    "fileMatch": [
+      "^app\\.ya?ml$",
+      "^job\\.ya?ml$"
+    ],
     "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"]
+    "addLabels": ["k8s"]
   },
   "poetry": {
     "enabled": true,
