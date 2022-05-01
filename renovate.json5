@@ -33,7 +33,7 @@
   },
   "kubernetes": {
     "enabled": true,
-    "fileMatch": ["^(app|job)\\.ya?ml$"]
+    "fileMatch": ["^(app|job)\\.ya?ml$"],
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   }
