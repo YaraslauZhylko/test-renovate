@@ -36,7 +36,7 @@
     "fileMatch": ["^(app|job)\\.ya?ml$"],
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
-  }
+  },
   "poetry": {
     "enabled": true,
     "additionalBranchPrefix": "poetry/",
