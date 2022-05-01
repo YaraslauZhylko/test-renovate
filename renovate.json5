@@ -1,5 +1,5 @@
 {
-  "enabled": false,
+  "enabled": true,
   "hostRules": [
   ],
   "extends": [
@@ -31,6 +31,12 @@
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   },
+  "kubernetes": {
+    "enabled": true,
+    "fileMatch": ["^(app|job)\\.ya?ml$"]
+    "additionalBranchPrefix": "docker/",
+    "addLabels": ["docker"]
+  }
   "poetry": {
     "enabled": true,
     "additionalBranchPrefix": "poetry/",
