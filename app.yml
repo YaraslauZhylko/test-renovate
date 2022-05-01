@@ -1,0 +1,37 @@
+---
+name: test
+namespace: test
+engine: ~2
+public:
+  retries: true
+healthcheck:
+  liveness:
+    path: /live
+  readiness:
+    path: /ready
+scale:
+  horizontal: 3-20
+  cpuNoLimits: true
+  cpuThreshold: 65
+  vertical: medium.mem2x
+
+dependencies:
+  redis:
+    version: 15.3.2
+    repo: "@bitnami"
+    settings:
+      fullnameOverride: redis
+      architecture: standalone
+      master:
+        persistence:
+          size: 50Gi
+        livenessProbe:
+          initialDelaySeconds: 200
+        readinessProbe:
+          initialDelaySeconds: 200
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "250m"
+          limits:
+            memory: "8Gi"
