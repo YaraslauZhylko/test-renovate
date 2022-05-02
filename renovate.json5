@@ -103,9 +103,8 @@
         "^job\\.ya?ml$"
       ],
       "matchStrings": [
-        "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*\"@(?<repo>\\S+)\""
+        "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
-      "registryUrlTemplate": "https://charts.helm.sh/{{{repo}}}/",
       "datasourceTemplate": "helm"
     }
   ],
