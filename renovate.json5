@@ -128,7 +128,7 @@
       "description": "Bitnami Helm Chart repository",
       "matchManagers": ["regex"],
       "matchDatasources": ["helm"],
-      "matchSourceUrlPrefixes": ["https://github.com/bitnami"],
+      "matchSourceUrls": ["https://github.com/bitnami/bitnami-docker-redis"],
       "registryUrls": ["https://charts.bitnami.com/bitnami"]
     },
   ]
