@@ -35,3 +35,25 @@ dependencies:
             cpu: "250m"
           limits:
             memory: "8Gi"
+  mongodb:
+    version: 10.11.0
+    repo: "@bitnami"
+    settings:
+      useStatefulSet: true
+      fullnameOverride: mongodb
+      auth:
+        enabled: false
+  elasticsearch:
+    version: 7.7.0
+    repo: "@elastic"
+    settings:
+      clusterName: snowstorm
+      replicas: 2
+      esJavaOpts: "-Xmx2g -Xms2g"
+      resources:
+        requests:
+          cpu: "125m"
+          memory: "4Gi"
+        limits:
+          cpu: null
+          memory: "4Gi"
