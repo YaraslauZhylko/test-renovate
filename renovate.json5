@@ -103,19 +103,7 @@
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
       "datasourceTemplate": "helm",
-      "registryUrlTemplate": "
-        {{#if repo == '@bitnami'}}
-          https://charts.bitnami.com/bitnami
-        {{else if repo == '@elastic'}}
-          https://helm.elastic.co
-        {{else if repo == '@appscode'}}
-          https://charts.appscode.com/stable/
-        {{else if repo == '@stable'}}
-          https://charts.helm.sh/stable
-        {{else if !repo.startWith('@')}}
-          {{{repo}}}
-        {{/if}}
-      "
+      "registryUrlTemplate": "{{#if repo == '@bitnami'}}https://charts.bitnami.com/bitnami{{else if repo == '@elastic'}}https://helm.elastic.co{{else if repo == '@appscode'}}https://charts.appscode.com/stable/{{else if repo == '@stable'}}https://charts.helm.sh/stable{{else if !repo.startWith('@')}}{{{repo}}}{{/if}}"
     }
   ],
   "setup-cfg": {
