@@ -98,7 +98,7 @@
   },
   "regexManagers": [
     {
-      "fileMatch": ["^(?!app|job)\\.ya?ml$"],
+      "fileMatch": ["^(?:app|job)\\.ya?ml$"],
       "matchStrings": [
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
