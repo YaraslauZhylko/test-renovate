@@ -96,6 +96,21 @@
     "commitMessageTopic": "pyenv python version",
     "addLabels": ["pyenv"]
   },
+  "regexManagers": [
+    {
+      "enabled": true,
+      "fileMatch": [
+        "^app\\.ya?ml$",
+        "^job\\.ya?ml$"
+      ],
+      "matchStrings": [
+        "(?<depName>\S+):\s*version:\s*(?<currentValue>\S+)\s*repo:\s*("(\S+)"|(\S+))"
+      ],
+      "datasourceTemplate": "helm",
+      "additionalBranchPrefix": "k8s/",
+      "addLabels": ["k8s"]
+    }
+  ]
   "setup-cfg": {
     "enabled": false
   },
