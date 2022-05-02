@@ -104,7 +104,7 @@
         "^job\\.ya?ml$"
       ],
       "matchStrings": [
-        "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*("(?<aaa>\\S+)"|(?<aaa>\\S+))"
+        "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)"
       ],
       "datasourceTemplate": "helm",
       "additionalBranchPrefix": "k8s/",
