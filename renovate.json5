@@ -104,8 +104,7 @@
       ],
       "matchStrings": [
         "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*\"(?<repo>\\S+)\""
-      ],
-      "datasourceTemplate": "helm"
+      ]
     }
   ],
   "setup-cfg": {
