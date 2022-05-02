@@ -125,7 +125,7 @@
       "addLabels": ["k8s"]
     },
     {
-      "description": "Bitnami Helm Chart repository",
+      "description": "Override Bitnami repository URL",
       "matchManagers": ["regex"],
       "matchDatasources": ["helm"],
       "matchSourceUrls": ["https://github.com/bitnami/bitnami-docker-redis"],
