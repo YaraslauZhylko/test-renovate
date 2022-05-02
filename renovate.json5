@@ -116,6 +116,14 @@
       "separateMultipleMajor": true,
       "separateMajorMinor": true,
       "separateMinorPatch": true
+    },
+    {
+      "description": "Configure Helm dependency updates",
+      "managers": ["regex"],
+      "datasources": ["helm"],
+      "commitMessageTopic": "Helm dependency {{depName}}",
+      "additionalBranchPrefix": "helm/",
+      "addLabels": ["helm"]
     }
   ]
 }
