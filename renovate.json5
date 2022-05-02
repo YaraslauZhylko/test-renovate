@@ -105,7 +105,8 @@
       "matchStrings": [
         "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*\"@(?<repo>\\S+)\""
       ],
-      "registryUrlTemplate": "https://charts.helm.sh/stable/{{{repo}}}/{{{depName}}}",
+      "packageNameTemplate": "{{{repo}}}/{{{depName}}}",
+      "registryUrlTemplate": "https://charts.helm.sh/stable/",
       "datasourceTemplate": "helm"
     }
   ],
