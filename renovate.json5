@@ -105,7 +105,7 @@
       "matchStrings": [
         "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)"
       ],
-      "registryUrl": "https://charts.helm.sh/stable",
+      "registryUrlTemplate": "https://charts.helm.sh/stable",
       "datasourceTemplate": "helm"
     }
   ],
