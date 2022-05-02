@@ -110,7 +110,7 @@
       "additionalBranchPrefix": "k8s/",
       "addLabels": ["k8s"]
     }
-  ]
+  ],
   "setup-cfg": {
     "enabled": false
   },
