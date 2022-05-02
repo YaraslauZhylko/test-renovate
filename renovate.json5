@@ -102,8 +102,7 @@
       "matchStrings": [
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
-      "datasourceTemplate": "helm",
-      "registryUrlTemplate": "https://charts.bitnami.com/bitnami"
+      "datasourceTemplate": "helm"
     }
   ],
   "setup-cfg": {
@@ -119,11 +118,18 @@
     },
     {
       "description": "Configure Helm dependency updates",
-      "managers": ["regex"],
-      "datasources": ["helm"],
+      "matchManagers": ["regex"],
+      "matchDatasources": ["helm"],
       "commitMessageTopic": "Helm dependency {{depName}}",
-      "additionalBranchPrefix": "helm/",
-      "addLabels": ["helm"]
-    }
+      "additionalBranchPrefix": "k8s/",
+      "addLabels": ["k8s"]
+    },
+    {
+      "description": "Bitnami Helm Chart repository",
+      "matchManagers": ["regex"],
+      "matchDatasources": ["helm"],
+      "matchSourceUrlPrefixes": ["https://github.com/bitnami"],
+      "registryUrls": ["https://charts.bitnami.com/bitnami"]
+    },
   ]
 }
