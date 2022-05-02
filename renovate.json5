@@ -102,7 +102,8 @@
       "matchStrings": [
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
-      "datasourceTemplate": "helm"
+      "datasourceTemplate": "helm",
+      "registryUrlTemplate": "https://artifacthub.io/packages/helm/{{{repo}}}/{{{depName}}}"
     }
   ],
   "setup-cfg": {
@@ -123,13 +124,6 @@
       "commitMessageTopic": "Helm dependency {{depName}}",
       "additionalBranchPrefix": "k8s/",
       "addLabels": ["k8s"]
-    },
-    {
-      "description": "Override Bitnami repository URL",
-      "matchManagers": ["regex"],
-      "matchDatasources": ["helm"],
-      "matchSourceUrls": ["https://github.com/bitnami/bitnami-docker-redis"],
-      "registryUrls": ["https://charts.bitnami.com/bitnami"]
-    },
+    }
   ]
 }
