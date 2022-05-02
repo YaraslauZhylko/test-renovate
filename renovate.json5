@@ -98,12 +98,9 @@
   },
   "regexManagers": [
     {
-      "fileMatch": [
-        "^app\\.ya?ml$",
-        "^job\\.ya?ml$"
-      ],
+      "fileMatch": ["^(?!app|job)\\.ya?ml$"],
       "matchStrings": [
-        "(?<depName>\\S+):\\s*version:\\s*(?<currentValue>\\S+)\\s*repo:\\s*\"(?<repo>\\S+)\""
+        "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
       "datasourceTemplate": "helm"
     }
