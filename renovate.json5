@@ -102,8 +102,7 @@
       "matchStrings": [
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"@(?<repo>\\S+)\""
       ],
-      "datasourceTemplate": "helm",
-      "registryUrlTemplate": "https://artifacthub.io/packages/helm/{{{repo}}}/{{{depName}}}"
+      "datasourceTemplate": "helm"
     }
   ],
   "setup-cfg": {
@@ -123,7 +122,13 @@
       "matchDatasources": ["helm"],
       "commitMessageTopic": "Helm dependency {{depName}}",
       "additionalBranchPrefix": "k8s/",
-      "addLabels": ["k8s"]
+      "addLabels": ["k8s"],
+      "defaultRegistryUrls": [
+        "https://charts.helm.sh/stable",
+        "https://helm.elastic.co",
+        "https://charts.bitnami.com/bitnami",
+        "https://charts.appscode.com/stable/"
+      ]
     }
   ]
 }
