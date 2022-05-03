@@ -104,7 +104,7 @@
     }
   ],
   "setup-cfg": {
-    "enabled": false
+    "enabled": false 
   },
   "packageRules": [
     {
