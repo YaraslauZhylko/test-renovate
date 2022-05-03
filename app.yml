@@ -36,7 +36,7 @@ dependencies:
           limits:
             memory: "8Gi"
   mongodb:
-    version: 10.11.0
+    version: 10.31.5
     repo: "@bitnami"
     settings:
       useStatefulSet: true
