@@ -100,10 +100,10 @@
     {
       "fileMatch": ["^(?:app|job)\\.ya?ml$"],
       "matchStrings": [
-        "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<registryUrl>\\S+)\""
+        "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<repo>\\S+)\""
       ],
       "datasourceTemplate": "helm",
-      "registryUrlTemplate": "{{{replace '@bitnami' 'https://charts.bitnami.com/bitnami' registryUrl}}}"
+      "registryUrlTemplate": ""{{#if containsString repo '@bitnami'}}https://charts.bitnami.com/bitnami{{else}}https://helm.elastic.co{{/if}}""
     }
   ],
   "setup-cfg": {
