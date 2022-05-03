@@ -89,13 +89,6 @@
       }
     ]
   },
-  "pyenv": {
-    "enabled": true,
-    "additionalBranchPrefix": "pyenv/",
-    "semanticCommitScope": "deps-dev",
-    "commitMessageTopic": "pyenv python version",
-    "addLabels": ["pyenv"]
-  },
   "regexManagers": [
     {
       "fileMatch": ["^(?:app|job)\\.ya?ml$"],
