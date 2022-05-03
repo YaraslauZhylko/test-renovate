@@ -31,15 +31,6 @@
     "additionalBranchPrefix": "docker/",
     "addLabels": ["docker"]
   },
-  "kubernetes": {
-    "enabled": true,
-    "fileMatch": [
-      "^app\\.ya?ml$",
-      "^job\\.ya?ml$"
-    ],
-    "additionalBranchPrefix": "docker/",
-    "addLabels": ["k8s"]
-  },
   "poetry": {
     "enabled": true,
     "additionalBranchPrefix": "poetry/",
