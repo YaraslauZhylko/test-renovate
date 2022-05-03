@@ -44,7 +44,7 @@ dependencies:
       auth:
         enabled: false
   elasticsearch:
-    version: 7.7.0
+    version: 17.9.29
     repo: "@elastic"
     settings:
       clusterName: snowstorm
