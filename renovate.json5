@@ -83,11 +83,16 @@
   "regexManagers": [
     {
       "fileMatch": ["^(?:app|job)\\.ya?ml$"],
+      "matchStringsStrategy": "any",
       "matchStrings": [
         "\
 (?<depName>\\S+):\\n\
 \\s*version:\\s*(?<currentValue>\\S+)\\n\
-\\s*repo:\\s*\"(?<appscodeRepo>@appscode)?(?<bitnamiRepo>@bitnami)?(?<elasticRepo>@elastic)?(?<elasticStable>@stable)?(?<unknownRepo>\\S+)?\"\\n"
+\\s*repo:\\s*\"(?<appscodeRepo>@appscode)?(?<bitnamiRepo>@bitnami)?(?<elasticRepo>@elastic)?(?<elasticStable>@stable)?(?<unknownRepo>\\S+)?\"\\n",
+        "\
+(?<depName>\\S+):\\n\
+\\s*repo:\\s*\"(?<appscodeRepo>@appscode)?(?<bitnamiRepo>@bitnami)?(?<elasticRepo>@elastic)?(?<elasticStable>@stable)?(?<unknownRepo>\\S+)?\"\\n\
+\\s*version:\\s*(?<currentValue>\\S+)\\n"
       ],
       "datasourceTemplate": "helm",
       "registryUrlTemplate": "\
