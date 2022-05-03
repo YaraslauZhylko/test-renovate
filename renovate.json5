@@ -100,12 +100,18 @@
     {
       "fileMatch": ["^(?:app|job)\\.ya?ml$"],
       "matchStrings": [
-        "(?<depName>\\S+):\\n\
+        "\
+(?<depName>\\S+):\\n\
 \\s*version:\\s*(?<currentValue>\\S+)\\n\
 \\s*repo:\\s*\"(?<appscodeRepo>@appscode)?(?<bitnamiRepo>@bitnami)?(?<elasticRepo>@elastic)?(?<elasticStable>@stable)?(?<unknownRepo>\\S+)?\"\\n"
       ],
       "datasourceTemplate": "helm",
-      "registryUrlTemplate": "{{#if appscodeRepo}}https://charts.appscode.com/stable/{{else if bitnamiRepo}}https://charts.bitnami.com/bitnami{{else if elasticRepo}}https://helm.elastic.co{{else if stableRepo}}https://charts.helm.sh/stable{{/if}}"
+      "registryUrlTemplate": "\
+{{#if appscodeRepo}}https://charts.appscode.com/stable/\
+{{else if bitnamiRepo}}https://charts.bitnami.com/bitnami\
+{{else if elasticRepo}}https://helm.elastic.co\
+{{else if stableRepo}}https://charts.helm.sh/stable\
+{{/if}}"
     }
   ],
   "setup-cfg": {
