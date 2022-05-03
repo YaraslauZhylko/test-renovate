@@ -103,7 +103,7 @@
         "(?<depName>\\S+):\\n\\s*version:\\s*(?<currentValue>\\S+)\\n\\s*repo:\\s*\"(?<bitnamiRepo>@bitnami)?(?<elasticRepo>@elastic)?(?<repo>\\S+)?\""
       ],
       "datasourceTemplate": "helm",
-      "registryUrlTemplate": "{{#if bitnamiRepo}}https://charts.bitnami.com/bitnami{{else}}https://helm.elastic.co{{/if}}"
+      "registryUrlTemplate": "{{#if bitnamiRepo}}https://charts.bitnami.com/bitnami{{else if elasticRepo}}https://helm.elastic.co{{else}}n/a{{/if}}"
     }
   ],
   "setup-cfg": {
