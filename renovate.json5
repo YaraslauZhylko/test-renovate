@@ -54,6 +54,13 @@
         "enabled": false
       },
       {
+        "description": "All dev dependencies in one PR",
+        "matchDepTypes": ["devDependencies"],
+        "groupName": "javascript dev dependencies",
+        "groupSlug": "dev-dependencies",
+        "semanticCommitScope": "deps-dev"
+      },
+      {
         "description": "All Storybook dependencies in one PR",
         "matchPackagePrefixes": ["@storybook/"],
         "groupName": "storybook dependencies",
@@ -65,13 +72,6 @@
         "matchPackagePrefixes": ["@testing-library/"],
         "groupName": "testing library dependencies",
         "groupSlug": "testing-library-dev-dependencies",
-        "semanticCommitScope": "deps-dev"
-      },
-      {
-        "description": "All dev dependencies in one PR",
-        "matchDepTypes": ["devDependencies"],
-        "groupName": "javascript dev dependencies",
-        "groupSlug": "dev-dependencies",
         "semanticCommitScope": "deps-dev"
       }
     ],
