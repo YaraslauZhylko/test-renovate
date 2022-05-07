@@ -61,16 +61,16 @@
         "semanticCommitScope": "deps-dev"
       },
       {
-        "description": "All Storybook dependencies in one PR",
+        "description": "All Storybook dev dependencies in one PR",
         "matchPackagePrefixes": ["@storybook/"],
-        "groupName": "storybook dependencies",
+        "groupName": "storybook dev dependencies",
         "groupSlug": "storybook-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
       {
         "description": "All Testing Library dev dependencies in one PR",
         "matchPackagePrefixes": ["@testing-library/"],
-        "groupName": "testing library dependencies",
+        "groupName": "testing library dev dependencies",
         "groupSlug": "testing-library-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       }
