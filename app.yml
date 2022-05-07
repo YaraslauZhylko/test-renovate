@@ -45,7 +45,7 @@ dependencies:
         enabled: false
   elasticsearch:
     repo: "@elastic"
-    version: 7.7.0
+    version: 7.17.3
     settings:
       clusterName: snowstorm
       replicas: 2
