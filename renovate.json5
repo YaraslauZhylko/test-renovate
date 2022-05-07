@@ -38,15 +38,15 @@
     "packageRules": [
       {
         "description": "All Material UI dependencies in one PR",
-        "matchPackagePrefixes": ["@mui/"]
+        "matchPackagePrefixes": ["@mui/"],
         "groupName": "material ui dependencies",
-        "groupSlug": "mui-dependencies",
+        "groupSlug": "mui-dependencies"
       },
       {
         "description": "All Snowplow dependencies in one PR",
-        "matchPackagePrefixes": ["@snowplow/"]
+        "matchPackagePrefixes": ["@snowplow/"],
         "groupName": "snowplow dependencies",
-        "groupSlug": "snowplow-dependencies",
+        "groupSlug": "snowplow-dependencies"
       },
       {
         "description": "Ignore 'serverless' packages as we are going to deprecate it",
@@ -55,14 +55,14 @@
       },
       {
         "description": "All Storybook dependencies in one PR",
-        "matchPackagePrefixes": ["@storybook/"]
+        "matchPackagePrefixes": ["@storybook/"],
         "groupName": "storybook dependencies",
         "groupSlug": "storybook-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
       {
         "description": "All Testing Library dev dependencies in one PR",
-        "matchPackagePrefixes": ["@testing-library/"]
+        "matchPackagePrefixes": ["@testing-library/"],
         "groupName": "testing library dependencies",
         "groupSlug": "testing-library-dev-dependencies",
         "semanticCommitScope": "deps-dev"
