@@ -40,13 +40,13 @@
       {
         "description": "All Material UI dependencies in one PR",
         "matchPackagePrefixes": ["@mui/"],
-        "groupName": "material ui dependencies",
+        "groupName": "@mui dependencies",
         "groupSlug": "mui-dependencies"
       },
       {
         "description": "All Snowplow dependencies in one PR",
         "matchPackagePrefixes": ["@snowplow/"],
-        "groupName": "snowplow dependencies",
+        "groupName": "@snowplow dependencies",
         "groupSlug": "snowplow-dependencies"
       },
       {
@@ -64,14 +64,14 @@
       {
         "description": "All Storybook dev dependencies in one PR",
         "matchPackagePrefixes": ["@storybook/"],
-        "groupName": "storybook dev dependencies",
+        "groupName": "@storybook dev dependencies",
         "groupSlug": "storybook-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       },
       {
         "description": "All Testing Library dev dependencies in one PR",
         "matchPackagePrefixes": ["@testing-library/"],
-        "groupName": "testing library dev dependencies",
+        "groupName": "@testing-library dev dependencies",
         "groupSlug": "testing-library-dev-dependencies",
         "semanticCommitScope": "deps-dev"
       }
