@@ -36,6 +36,7 @@
     "additionalBranchPrefix": "js/",
     "addLabels": ["javascript"],
     "packageRules": [
+      // The order is important! The lowest matching rule takes precedence.
       {
         "description": "All Material UI dependencies in one PR",
         "matchPackagePrefixes": ["@mui/"],
