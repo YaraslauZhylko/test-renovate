@@ -9,8 +9,6 @@
   },
   "devDependencies": {
     "@craco/craco": "6.4.0",
-    "@storybook/addon-actions": "6.4.0",
-    "@storybook/addon-essentials": "6.4.0",
     "@testing-library/jest-dom": "5.16.0",
     "@testing-library/user-event": "13.4.0",
     "@types/file-saver": "2.0.0",
