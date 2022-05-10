@@ -35,50 +35,24 @@
     "enabled": true,
     "additionalBranchPrefix": "js/",
     "addLabels": ["javascript"],
+    "extends": ["group:monorepos"],
     "packageRules": [
-      // The order is important! The lowest matching rule takes precedence.
       {
-        "description": "All Material UI dependencies in one PR",
-        "matchPackagePrefixes": ["@mui/"],
-        "groupName": "@mui dependencies",
-        "groupSlug": "mui-dependencies"
+        "description": "All Snowplow monorepo dependencies in one PR",
+        "matchPackagePrefixes": ["@snowplow/"],
+        "groupName": "snowplow monorepo"
       },
       {
-        "description": "All Snowplow dependencies in one PR",
-        "matchPackagePrefixes": ["@snowplow/"],
-        "groupName": "@snowplow dependencies",
-        "groupSlug": "snowplow-dependencies"
+        "description": "All Testing Library monorepo dependencies in one PR",
+        "matchPackagePrefixes": ["@testing-library/"],
+        "groupName": "testing-library monorepo"
       },
       {
         "description": "Ignore 'serverless' packages as we are going to deprecate it",
         "matchPackagePrefixes": ["serverless"],
         "enabled": false
-      },
-      {
-        "description": "All dev dependencies in one PR",
-        "matchDepTypes": ["devDependencies"],
-        "groupName": "javascript dev dependencies",
-        "groupSlug": "dev-dependencies",
-        "semanticCommitScope": "deps-dev"
-      },
-      {
-        "description": "All Storybook dev dependencies in one PR",
-        "matchPackagePrefixes": ["@storybook/"],
-        "groupName": "@storybook dev dependencies",
-        "groupSlug": "storybook-dev-dependencies",
-        "semanticCommitScope": "deps-dev"
-      },
-      {
-        "description": "All Testing Library dev dependencies in one PR",
-        "matchPackagePrefixes": ["@testing-library/"],
-        "groupName": "@testing-library dev dependencies",
-        "groupSlug": "testing-library-dev-dependencies",
-        "semanticCommitScope": "deps-dev"
       }
-    ],
-    "lockFileMaintenance": {
-      "enabled": true
-    }
+    ]
   },
   "poetry": {
     "enabled": true,
