@@ -35,7 +35,10 @@
     "enabled": true,
     "additionalBranchPrefix": "js/",
     "addLabels": ["javascript"],
-    "extends": ["group:monorepos"],
+    "extends": [
+      "group:recommended",
+      "group:monorepos"
+    ],
     "packageRules": [
       {
         "description": "All Snowplow monorepo dependencies in one PR",
