@@ -3,9 +3,7 @@
   "hostRules": [
   ],
   "extends": [
-    ":semanticCommits",
-    ":semanticCommitType(chore)",
-    ":semanticCommitScope(deps)",
+    "config:base",
     ":label(dependencies)",
     ":prImmediately",
     ":rebaseStalePrs",
@@ -29,7 +27,16 @@
   "docker": {
     "enabled": true,
     "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"]
+    "addLabels": ["docker"],
+    "packageRules": [
+      {
+        "description": "Enforce Docker image version granularity",
+        "matchDatasources": ["docker"],
+        "separateMultipleMajor": true,
+        "separateMajorMinor": true,
+        "separateMinorPatch": true
+      }
+    ]
   },
   "js": {
     "enabled": true,
@@ -133,13 +140,6 @@
     "enabled": false 
   },
   "packageRules": [
-    {
-      "description": "Enforce Docker image version granularity",
-      "matchDatasources": ["docker"],
-      "separateMultipleMajor": true,
-      "separateMajorMinor": true,
-      "separateMinorPatch": true
-    },
     {
       "description": "Configure Helm dependency updates",
       "matchManagers": ["regex"],
