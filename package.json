@@ -12,7 +12,7 @@
     "@testing-library/jest-dom": "5.16.0",
     "@testing-library/user-event": "13.4.0",
     "@types/file-saver": "2.0.0",
-    "@types/jest": "26.0.0",
+    "@types/jest": "26.0.24",
     "@types/node": "16.11.0",
     "chromatic": "6.5.0"
   }
