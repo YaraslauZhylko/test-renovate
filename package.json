@@ -8,7 +8,7 @@
     "date-fns": "2.25.0"
   },
   "devDependencies": {
-    "@craco/craco": "6.4.0",
+    "@craco/craco": "6.4.3",
     "@testing-library/jest-dom": "5.16.0",
     "@testing-library/user-event": "13.4.0",
     "@types/file-saver": "2.0.0",
