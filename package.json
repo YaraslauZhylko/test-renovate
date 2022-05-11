@@ -13,7 +13,7 @@
     "@testing-library/user-event": "13.4.0",
     "@types/file-saver": "2.0.0",
     "@types/jest": "26.0.0",
-    "@types/node": "16.11.0",
+    "@types/node": "16.11.34",
     "chromatic": "6.5.0"
   }
 }
