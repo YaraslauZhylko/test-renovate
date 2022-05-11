@@ -5,8 +5,6 @@
   "extends": [
     "config:base",
     ":semanticCommits",
-    ":semanticPrefixFixDepsChoreOthers",
-    ":semanticCommitScope(deps)",
     ":label(dependencies)",
     ":prImmediately",
     ":rebaseStalePrs",
@@ -16,7 +14,6 @@
   "circleci": {
     "enabled": true,
     "additionalBranchPrefix": "circleci/",
-    "semanticCommitScope": "deps-ci",
     "addLabels": ["circleci"],
     "packageRules": [
       {
@@ -72,8 +69,7 @@
         "description": "All dev dependencies in one PR",
         "matchDepTypes": ["dev-dependencies"],
         "groupName": "python dev dependencies",
-        "groupSlug": "dev-dependencies",
-        "semanticCommitScope": "deps-dev"
+        "groupSlug": "dev-dependencies"
       },
       {
         "description": "Ignore 'arrow' updates till it is properly migrated",
@@ -100,7 +96,6 @@
   "pre-commit": {
     "enabled": true,
     "additionalBranchPrefix": "pre-commit/",
-    "semanticCommitScope": "deps-dev",
     "addLabels": ["pre-commit"],
     "versioning": "loose",
     "packageRules": [
