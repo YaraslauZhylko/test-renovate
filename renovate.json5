@@ -27,16 +27,7 @@
   "docker": {
     "enabled": true,
     "additionalBranchPrefix": "docker/",
-    "addLabels": ["docker"],
-    "packageRules": [
-      {
-        "description": "Enforce Docker image version granularity",
-        "matchDatasources": ["docker"],
-        "separateMultipleMajor": true,
-        "separateMajorMinor": true,
-        "separateMinorPatch": true
-      }
-    ]
+    "addLabels": ["docker"]
   },
   "js": {
     "enabled": true,
@@ -60,9 +51,9 @@
       }
     ]
   },
-  "poetry": {
+  "python": {
     "enabled": true,
-    "additionalBranchPrefix": "poetry/",
+    "additionalBranchPrefix": "python/",
     "addLabels": ["python"],
     "packageRules": [
       {
@@ -123,7 +114,7 @@
       ],
       "datasourceTemplate": "helm",
       "registryUrlTemplate": "\
-{{#if appscodeRepo}}https://charts.appscode.com/stable/\
+{{#if appscodeRepo}}https://charts.appscode.com/stable\
 {{else if bitnamiRepo}}https://charts.bitnami.com/bitnami\
 {{else if elasticRepo}}https://helm.elastic.co\
 {{else if stableRepo}}https://charts.helm.sh/stable\
@@ -131,14 +122,21 @@
     }
   ],
   "setup-cfg": {
-    "enabled": false 
+    "enabled": false
   },
   "packageRules": [
+    {
+      "description": "Enforce Docker image version granularity",
+      "matchDatasources": ["docker"],
+      "separateMultipleMajor": true,
+      "separateMajorMinor": true,
+      "separateMinorPatch": true
+    },
     {
       "description": "Configure Helm dependency updates",
       "matchManagers": ["regex"],
       "matchDatasources": ["helm"],
-      "commitMessageTopic": "Helm dependency {{depName}}",
+      "commitMessageTopic": "helm dependency {{depName}}",
       "additionalBranchPrefix": "k8s/",
       "addLabels": ["k8s"]
     }
