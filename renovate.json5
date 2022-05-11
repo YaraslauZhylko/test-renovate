@@ -5,6 +5,8 @@
   "extends": [
     "config:base",
     ":semanticCommits",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":semanticCommitScope(deps)",
     ":label(dependencies)",
     ":prImmediately",
     ":rebaseStalePrs",
@@ -43,10 +45,6 @@
     "enabled": true,
     "additionalBranchPrefix": "js/",
     "addLabels": ["javascript"],
-    "extends": [
-      "group:recommended",
-      "group:monorepos"
-    ],
     "packageRules": [
       {
         "description": "All Snowplow monorepo dependencies in one PR",
