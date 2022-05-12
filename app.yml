@@ -17,7 +17,7 @@ scale:
 
 dependencies:
   redis:
-    version: 16.9.0
+    version: 16.9.3
     repo: "@bitnami"
     settings:
       fullnameOverride: redis
